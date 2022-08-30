@@ -7,22 +7,32 @@
 
 protocol TransactionDatasource {
     
-    func getTransactions(completion: @escaping ((Result<[Transaction], Error>) -> Void))
-    func saveTransactions(transaction: Transaction)
+    func getTransactions(completion: @escaping ((Result<[Transaction], CustomErrors>) -> Void))
+    func saveTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void))
     
 }
 
 
 class TransactionRepository: TransactionDatasource {
+    func saveTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
+        
+    }
     
-    func getTransactions(completion: @escaping ((Result<[Transaction], Error>) -> Void)) {
+    var persistence: iPersistence
+    
+    init(persistence: iPersistence) {
+        self.persistence = persistence
+    }
+    
+    func getTransactions(completion: @escaping ((Result<[Transaction], CustomErrors>) -> Void)) {
+        
+    }
+    
+    func saveTransactions(completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
         
     }
     
     
-    func saveTransactions(transaction: Transaction) {
-        
-    }
     
     
 }

@@ -14,13 +14,17 @@
 		8417E28428BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8417E28228BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld */; };
 		8417E28628BCE1AE00DA1DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28528BCE1AE00DA1DAC /* Assets.xcassets */; };
 		8417E28928BCE1AE00DA1DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */; };
-		8417E29428BCE1AE00DA1DAC /* TransactionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E29328BCE1AE00DA1DAC /* TransactionAppTests.swift */; };
+		8417E29428BCE1AE00DA1DAC /* TransactionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E29328BCE1AE00DA1DAC /* TransactionRepositoryTests.swift */; };
 		8417E29E28BCE1AE00DA1DAC /* TransactionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E29D28BCE1AE00DA1DAC /* TransactionAppUITests.swift */; };
 		8417E2A028BCE1AE00DA1DAC /* TransactionAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E29F28BCE1AE00DA1DAC /* TransactionAppUITestsLaunchTests.swift */; };
 		8417E2B628BD0F1300DA1DAC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2B528BD0F1300DA1DAC /* PersistenceController.swift */; };
 		8417E2B828BD47CC00DA1DAC /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2B728BD47CC00DA1DAC /* TransactionRepository.swift */; };
 		8417E2BA28BD4B1700DA1DAC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2B928BD4B1700DA1DAC /* Transaction.swift */; };
 		8417E2BC28BDAFF100DA1DAC /* TransactionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2BB28BDAFF100DA1DAC /* TransactionUsecase.swift */; };
+		8417E2BF28BDB85000DA1DAC /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2BE28BDB85000DA1DAC /* CustomErrors.swift */; };
+		8417E2C128BDBB0A00DA1DAC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C028BDBB0A00DA1DAC /* Persistence.swift */; };
+		8417E2C428BDBE4300DA1DAC /* MockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C328BDBE4300DA1DAC /* MockRepo.swift */; };
+		8417E2C728BDBE8500DA1DAC /* MockPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,7 @@
 		8417E28828BCE1AE00DA1DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8417E28A28BCE1AE00DA1DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8417E28F28BCE1AE00DA1DAC /* TransactionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8417E29328BCE1AE00DA1DAC /* TransactionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAppTests.swift; sourceTree = "<group>"; };
+		8417E29328BCE1AE00DA1DAC /* TransactionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryTests.swift; sourceTree = "<group>"; };
 		8417E29928BCE1AE00DA1DAC /* TransactionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8417E29D28BCE1AE00DA1DAC /* TransactionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAppUITests.swift; sourceTree = "<group>"; };
 		8417E29F28BCE1AE00DA1DAC /* TransactionAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -59,6 +63,10 @@
 		8417E2B728BD47CC00DA1DAC /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
 		8417E2B928BD4B1700DA1DAC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8417E2BB28BDAFF100DA1DAC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
+		8417E2BE28BDB85000DA1DAC /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		8417E2C028BDBB0A00DA1DAC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8417E2C328BDBE4300DA1DAC /* MockRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepo.swift; sourceTree = "<group>"; };
+		8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		8417E27828BCE1AB00DA1DAC /* TransactionApp */ = {
 			isa = PBXGroup;
 			children = (
+				8417E2BD28BDB80B00DA1DAC /* util */,
 				8417E2B228BCE9E200DA1DAC /* ui */,
 				8417E2B128BCE98000DA1DAC /* di */,
 				8417E2B028BCE97800DA1DAC /* feature */,
@@ -127,7 +136,8 @@
 		8417E29228BCE1AE00DA1DAC /* TransactionAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				8417E29328BCE1AE00DA1DAC /* TransactionAppTests.swift */,
+				8417E2C228BDBE3400DA1DAC /* Mocks */,
+				8417E29328BCE1AE00DA1DAC /* TransactionRepositoryTests.swift */,
 			);
 			path = TransactionAppTests;
 			sourceTree = "<group>";
@@ -194,8 +204,26 @@
 			isa = PBXGroup;
 			children = (
 				8417E2B528BD0F1300DA1DAC /* PersistenceController.swift */,
+				8417E2C028BDBB0A00DA1DAC /* Persistence.swift */,
 			);
 			path = local;
+			sourceTree = "<group>";
+		};
+		8417E2BD28BDB80B00DA1DAC /* util */ = {
+			isa = PBXGroup;
+			children = (
+				8417E2BE28BDB85000DA1DAC /* CustomErrors.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		8417E2C228BDBE3400DA1DAC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8417E2C328BDBE4300DA1DAC /* MockRepo.swift */,
+				8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8417E2BA28BD4B1700DA1DAC /* Transaction.swift in Sources */,
+				8417E2BF28BDB85000DA1DAC /* CustomErrors.swift in Sources */,
 				8417E27E28BCE1AB00DA1DAC /* ViewController.swift in Sources */,
 				8417E2BC28BDAFF100DA1DAC /* TransactionUsecase.swift in Sources */,
 				8417E27A28BCE1AB00DA1DAC /* AppDelegate.swift in Sources */,
@@ -337,6 +366,7 @@
 				8417E2B828BD47CC00DA1DAC /* TransactionRepository.swift in Sources */,
 				8417E27C28BCE1AB00DA1DAC /* SceneDelegate.swift in Sources */,
 				8417E2B628BD0F1300DA1DAC /* PersistenceController.swift in Sources */,
+				8417E2C128BDBB0A00DA1DAC /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8417E29428BCE1AE00DA1DAC /* TransactionAppTests.swift in Sources */,
+				8417E29428BCE1AE00DA1DAC /* TransactionRepositoryTests.swift in Sources */,
+				8417E2C728BDBE8500DA1DAC /* MockPersistence.swift in Sources */,
+				8417E2C428BDBE4300DA1DAC /* MockRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
