@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Transaction {
-    let id: Int
+    let id: UUID
     let title: String
     let type: TransactionType
     let amount: Float
@@ -17,7 +17,7 @@ struct Transaction {
 }
 
 
-enum TransactionType {
+enum TransactionType: String {
     case income
     case expenses
 }

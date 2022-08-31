@@ -11,6 +11,7 @@ public enum CustomErrors: Error {
     
     case internalParsingDataError(s: String)
     case generalError(s: String)
+    case persistenceError(s: String)
     case unknownResponse(s: String)
     
 }

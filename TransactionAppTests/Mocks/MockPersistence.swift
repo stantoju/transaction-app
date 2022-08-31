@@ -32,5 +32,9 @@ class MockPersistence: iPersistence {
         }
     }
     
+    func deleteItem(data: Transaction) {
+        transactionStorage = transactionStorage.filter { return $0.id != data.id}
+    }
+    
     
 }

@@ -45,5 +45,9 @@ class MockRepository: TransactionDatasource {
         }
     }
     
+    func deleteTransactions(data: Transaction) {
+        
+    }
+    
     
 }

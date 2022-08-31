@@ -87,9 +87,9 @@ class TransactionAppTests: XCTestCase {
     
     
     private func generateTransactions() -> [Transaction]{
-        let transaction1 = Transaction(id: 1, title: "Transaction 1", type: .income, amount: 400.50, date: Date())
-        let transaction2 = Transaction(id: 2, title: "Transaction 2", type: .expenses, amount: 149.99, date: Date())
-        let transaction3 = Transaction(id: 3, title: "Transaction 3", type: .expenses, amount: 180.00, date: Date())
+        let transaction1 = Transaction(id: UUID(), title: "Transaction 1", type: .income, amount: 400.50, date: Date())
+        let transaction2 = Transaction(id: UUID(), title: "Transaction 2", type: .expenses, amount: 149.99, date: Date())
+        let transaction3 = Transaction(id: UUID(), title: "Transaction 3", type: .expenses, amount: 180.00, date: Date())
         let transactions = [transaction1, transaction2, transaction3]
         return transactions
     }
