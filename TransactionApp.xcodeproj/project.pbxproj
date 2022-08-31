@@ -10,7 +10,6 @@
 		8417E27A28BCE1AB00DA1DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27928BCE1AB00DA1DAC /* AppDelegate.swift */; };
 		8417E27C28BCE1AB00DA1DAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27B28BCE1AB00DA1DAC /* SceneDelegate.swift */; };
 		8417E27E28BCE1AB00DA1DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27D28BCE1AB00DA1DAC /* ViewController.swift */; };
-		8417E28128BCE1AB00DA1DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417E27F28BCE1AB00DA1DAC /* Main.storyboard */; };
 		8417E28428BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8417E28228BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld */; };
 		8417E28628BCE1AE00DA1DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28528BCE1AE00DA1DAC /* Assets.xcassets */; };
 		8417E28928BCE1AE00DA1DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */; };
@@ -27,6 +26,8 @@
 		8417E2C728BDBE8500DA1DAC /* MockPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */; };
 		8417E2CE28BF02C300DA1DAC /* PersistenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2CD28BF02C300DA1DAC /* PersistenceTest.swift */; };
 		8417E2D228BF15AA00DA1DAC /* TransactionUsecaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */; };
+		8417E2D428BF1C2300DA1DAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D328BF1C2300DA1DAC /* Coordinator.swift */; };
+		8417E2D628BF1C5900DA1DAC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D528BF1C5900DA1DAC /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,6 @@
 		8417E27928BCE1AB00DA1DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8417E27B28BCE1AB00DA1DAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8417E27D28BCE1AB00DA1DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8417E28028BCE1AB00DA1DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8417E28328BCE1AB00DA1DAC /* TransactionApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionApp.xcdatamodel; sourceTree = "<group>"; };
 		8417E28528BCE1AE00DA1DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8417E28828BCE1AE00DA1DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistence.swift; sourceTree = "<group>"; };
 		8417E2CD28BF02C300DA1DAC /* PersistenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTest.swift; sourceTree = "<group>"; };
 		8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecaseTest.swift; sourceTree = "<group>"; };
+		8417E2D328BF1C2300DA1DAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8417E2D528BF1C5900DA1DAC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +130,6 @@
 				8417E2AF28BCE96B00DA1DAC /* main */,
 				8417E2AE28BCE95C00DA1DAC /* core */,
 				8417E27D28BCE1AB00DA1DAC /* ViewController.swift */,
-				8417E27F28BCE1AB00DA1DAC /* Main.storyboard */,
 				8417E28528BCE1AE00DA1DAC /* Assets.xcassets */,
 				8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */,
 				8417E28A28BCE1AE00DA1DAC /* Info.plist */,
@@ -185,6 +186,8 @@
 		8417E2B128BCE98000DA1DAC /* di */ = {
 			isa = PBXGroup;
 			children = (
+				8417E2D328BF1C2300DA1DAC /* Coordinator.swift */,
+				8417E2D528BF1C5900DA1DAC /* MainCoordinator.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -346,7 +349,6 @@
 			files = (
 				8417E28928BCE1AE00DA1DAC /* LaunchScreen.storyboard in Resources */,
 				8417E28628BCE1AE00DA1DAC /* Assets.xcassets in Resources */,
-				8417E28128BCE1AB00DA1DAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,11 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8417E2BA28BD4B1700DA1DAC /* Transaction.swift in Sources */,
+				8417E2D628BF1C5900DA1DAC /* MainCoordinator.swift in Sources */,
 				8417E2BF28BDB85000DA1DAC /* CustomErrors.swift in Sources */,
 				8417E27E28BCE1AB00DA1DAC /* ViewController.swift in Sources */,
 				8417E2BC28BDAFF100DA1DAC /* TransactionUsecase.swift in Sources */,
 				8417E27A28BCE1AB00DA1DAC /* AppDelegate.swift in Sources */,
 				8417E28428BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld in Sources */,
+				8417E2D428BF1C2300DA1DAC /* Coordinator.swift in Sources */,
 				8417E2B828BD47CC00DA1DAC /* TransactionRepository.swift in Sources */,
 				8417E27C28BCE1AB00DA1DAC /* SceneDelegate.swift in Sources */,
 				8417E2B628BD0F1300DA1DAC /* PersistenceController.swift in Sources */,
@@ -421,14 +425,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8417E27F28BCE1AB00DA1DAC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8417E28028BCE1AB00DA1DAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -566,7 +562,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TransactionApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -595,7 +590,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TransactionApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
