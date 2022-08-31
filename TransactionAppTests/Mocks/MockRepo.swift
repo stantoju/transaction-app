@@ -32,7 +32,7 @@ class MockRepository: TransactionDatasource {
     }
     
     
-    func saveTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
+    func saveTransactions(data: Transaction, completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
         persistence.saveItem(data: data) { res in
             switch res {
             case .success(let result):
@@ -46,7 +46,7 @@ class MockRepository: TransactionDatasource {
     }
     
     func deleteTransactions(data: Transaction) {
-        
+        persistence.deleteItem(data: data)
     }
     
     

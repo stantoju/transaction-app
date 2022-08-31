@@ -23,8 +23,8 @@ class TransactionAppTests: XCTestCase {
 
     func test_Save_Transaction_Successfully() throws {
         repository = instanciateRepository()
-        let transactions = generateTransactions()
-        repository.saveTransactions(data: transactions) { res in
+        let transaction = generateTransactions().first!
+        repository.saveTransactions(data: transaction) { res in
             switch res {
             case .success(let response):
                 XCTAssertNotNil(response)
@@ -41,7 +41,9 @@ class TransactionAppTests: XCTestCase {
         repository = instanciateRepository()
         // Adding transaction to mock storage
         let transactions = generateTransactions()
-        repository.saveTransactions(data: transactions) { _ in}
+        for item in transactions {
+            repository.saveTransactions(data: item) { _ in}
+        }
         // Fetching data
         repository.getTransactions {  res in
             switch res {
@@ -58,8 +60,8 @@ class TransactionAppTests: XCTestCase {
     
     func test_Save_Transaction_Failure() throws {
         repository = instanciateRepository(successType: false)
-        let transactions = generateTransactions()
-        repository.saveTransactions(data: transactions) { res in
+        let transaction = generateTransactions().first!
+        repository.saveTransactions(data: transaction) { res in
             switch res {
             case .success(_):
                 XCTFail("Expected failure here, but got success")

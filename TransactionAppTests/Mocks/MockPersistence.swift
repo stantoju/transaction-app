@@ -16,8 +16,8 @@ class MockPersistence: iPersistence {
     
     func saveItem<T>(data: T, completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
         if successType {
-            let transactions = data as! [Transaction]
-            transactionStorage.append(contentsOf: transactions)
+            let transactions = data as! Transaction
+            transactionStorage.append(transactions)
             completion(.success("success"))
         } else {
             completion(.failure(.unknownResponse(s: "Something went wrong")))

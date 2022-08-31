@@ -26,6 +26,7 @@
 		8417E2C428BDBE4300DA1DAC /* MockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C328BDBE4300DA1DAC /* MockRepo.swift */; };
 		8417E2C728BDBE8500DA1DAC /* MockPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */; };
 		8417E2CE28BF02C300DA1DAC /* PersistenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2CD28BF02C300DA1DAC /* PersistenceTest.swift */; };
+		8417E2D228BF15AA00DA1DAC /* TransactionUsecaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8417E2C328BDBE4300DA1DAC /* MockRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepo.swift; sourceTree = "<group>"; };
 		8417E2C628BDBE8500DA1DAC /* MockPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistence.swift; sourceTree = "<group>"; };
 		8417E2CD28BF02C300DA1DAC /* PersistenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTest.swift; sourceTree = "<group>"; };
+		8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecaseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				8417E2CA28BF026500DA1DAC /* IntegrationTests */,
 				8417E2C228BDBE3400DA1DAC /* Mocks */,
 				8417E29328BCE1AE00DA1DAC /* TransactionRepositoryTests.swift */,
+				8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */,
 			);
 			path = TransactionAppTests;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8417E2D228BF15AA00DA1DAC /* TransactionUsecaseTest.swift in Sources */,
 				8417E29428BCE1AE00DA1DAC /* TransactionRepositoryTests.swift in Sources */,
 				8417E2CE28BF02C300DA1DAC /* PersistenceTest.swift in Sources */,
 				8417E2C728BDBE8500DA1DAC /* MockPersistence.swift in Sources */,
