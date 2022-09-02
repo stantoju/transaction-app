@@ -16,8 +16,20 @@ struct Transaction {
     let date: Date
 }
 
+struct GroupedTransaction {
+    let date: String
+    let content: [Transaction]
+}
+
 
 enum TransactionType: String {
-    case income
-    case expenses
+    case income = "income"
+    case expenses = "expenses"
+}
+
+
+struct Statistics {
+    let income: Float
+    let expenses: Float
+    let ratio: Float
 }

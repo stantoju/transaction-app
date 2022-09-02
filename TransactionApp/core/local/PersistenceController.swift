@@ -41,8 +41,8 @@ struct PersistenceController {
        }
     
     
-//    func createArticlesFetchedResultsController() -> NSFetchedResultsController<Article> {
-//           let request: NSFetchRequest<Article> = Article.fetchRequest()
+//    func createTransactionFetchedResultsController() -> NSFetchedResultsController<TransactionEntity> {
+//           let request: NSFetchRequest<TransactionEntity> = TransactionEntity.fetchRequest()
 //        request.sortDescriptors = []
 //        return NSFetchedResultsController(fetchRequest: request, managedObjectContext: container.viewContext, sectionNameKeyPath: nil, cacheName: nil)
 //       }

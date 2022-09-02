@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8417E27A28BCE1AB00DA1DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27928BCE1AB00DA1DAC /* AppDelegate.swift */; };
 		8417E27C28BCE1AB00DA1DAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27B28BCE1AB00DA1DAC /* SceneDelegate.swift */; };
-		8417E27E28BCE1AB00DA1DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27D28BCE1AB00DA1DAC /* ViewController.swift */; };
+		8417E27E28BCE1AB00DA1DAC /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E27D28BCE1AB00DA1DAC /* TransactionController.swift */; };
 		8417E28428BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8417E28228BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld */; };
 		8417E28628BCE1AE00DA1DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28528BCE1AE00DA1DAC /* Assets.xcassets */; };
 		8417E28928BCE1AE00DA1DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */; };
@@ -28,6 +28,16 @@
 		8417E2D228BF15AA00DA1DAC /* TransactionUsecaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */; };
 		8417E2D428BF1C2300DA1DAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D328BF1C2300DA1DAC /* Coordinator.swift */; };
 		8417E2D628BF1C5900DA1DAC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D528BF1C5900DA1DAC /* MainCoordinator.swift */; };
+		8417E2D928BF22A900DA1DAC /* TopWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2D828BF22A900DA1DAC /* TopWidget.swift */; };
+		8417E2DB28BF253400DA1DAC /* SingleTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2DA28BF253400DA1DAC /* SingleTop.swift */; };
+		8417E2E128BF743400DA1DAC /* DailyTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417E2E028BF743400DA1DAC /* DailyTransaction.swift */; };
+		844D198D28BFA45E00642139 /* TransactionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D198C28BFA45E00642139 /* TransactionViewmodel.swift */; };
+		844D198F28C0083800642139 /* EntryModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D198E28C0083800642139 /* EntryModal.swift */; };
+		844D199128C0CB5700642139 /* BottomOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199028C0CB5700642139 /* BottomOptions.swift */; };
+		844D199428C0DF1800642139 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199328C0DF1800642139 /* UIView.swift */; };
+		844D199628C21CF200642139 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199528C21CF100642139 /* UIViewController.swift */; };
+		844D199828C21D1B00642139 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199728C21D1B00642139 /* Date.swift */; };
+		844D199A28C25B6D00642139 /* TransactionControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199928C25B6D00642139 /* TransactionControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +61,7 @@
 		8417E27628BCE1AB00DA1DAC /* TransactionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8417E27928BCE1AB00DA1DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8417E27B28BCE1AB00DA1DAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8417E27D28BCE1AB00DA1DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8417E27D28BCE1AB00DA1DAC /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
 		8417E28328BCE1AB00DA1DAC /* TransactionApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionApp.xcdatamodel; sourceTree = "<group>"; };
 		8417E28528BCE1AE00DA1DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8417E28828BCE1AE00DA1DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +83,16 @@
 		8417E2D128BF15AA00DA1DAC /* TransactionUsecaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecaseTest.swift; sourceTree = "<group>"; };
 		8417E2D328BF1C2300DA1DAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8417E2D528BF1C5900DA1DAC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		8417E2D828BF22A900DA1DAC /* TopWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWidget.swift; sourceTree = "<group>"; };
+		8417E2DA28BF253400DA1DAC /* SingleTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTop.swift; sourceTree = "<group>"; };
+		8417E2E028BF743400DA1DAC /* DailyTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTransaction.swift; sourceTree = "<group>"; };
+		844D198C28BFA45E00642139 /* TransactionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewmodel.swift; sourceTree = "<group>"; };
+		844D198E28C0083800642139 /* EntryModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModal.swift; sourceTree = "<group>"; };
+		844D199028C0CB5700642139 /* BottomOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomOptions.swift; sourceTree = "<group>"; };
+		844D199328C0DF1800642139 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		844D199528C21CF100642139 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		844D199728C21D1B00642139 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		844D199928C25B6D00642139 /* TransactionControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +149,6 @@
 				8417E2B028BCE97800DA1DAC /* feature */,
 				8417E2AF28BCE96B00DA1DAC /* main */,
 				8417E2AE28BCE95C00DA1DAC /* core */,
-				8417E27D28BCE1AB00DA1DAC /* ViewController.swift */,
 				8417E28528BCE1AE00DA1DAC /* Assets.xcassets */,
 				8417E28728BCE1AE00DA1DAC /* LaunchScreen.storyboard */,
 				8417E28A28BCE1AE00DA1DAC /* Info.plist */,
@@ -161,6 +180,7 @@
 		8417E2AE28BCE95C00DA1DAC /* core */ = {
 			isa = PBXGroup;
 			children = (
+				844D199228C0DF0900642139 /* extension */,
 				8417E2B428BD0E5100DA1DAC /* local */,
 			);
 			path = core;
@@ -195,6 +215,9 @@
 		8417E2B228BCE9E200DA1DAC /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				8417E2D728BF228C00DA1DAC /* component */,
+				8417E27D28BCE1AB00DA1DAC /* TransactionController.swift */,
+				844D198C28BFA45E00642139 /* TransactionViewmodel.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -239,8 +262,31 @@
 			isa = PBXGroup;
 			children = (
 				8417E2CD28BF02C300DA1DAC /* PersistenceTest.swift */,
+				844D199928C25B6D00642139 /* TransactionControllerTest.swift */,
 			);
 			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		8417E2D728BF228C00DA1DAC /* component */ = {
+			isa = PBXGroup;
+			children = (
+				8417E2D828BF22A900DA1DAC /* TopWidget.swift */,
+				8417E2DA28BF253400DA1DAC /* SingleTop.swift */,
+				8417E2E028BF743400DA1DAC /* DailyTransaction.swift */,
+				844D198E28C0083800642139 /* EntryModal.swift */,
+				844D199028C0CB5700642139 /* BottomOptions.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		844D199228C0DF0900642139 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				844D199328C0DF1800642139 /* UIView.swift */,
+				844D199528C21CF100642139 /* UIViewController.swift */,
+				844D199728C21D1B00642139 /* Date.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,18 +419,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8417E2E128BF743400DA1DAC /* DailyTransaction.swift in Sources */,
 				8417E2BA28BD4B1700DA1DAC /* Transaction.swift in Sources */,
 				8417E2D628BF1C5900DA1DAC /* MainCoordinator.swift in Sources */,
 				8417E2BF28BDB85000DA1DAC /* CustomErrors.swift in Sources */,
-				8417E27E28BCE1AB00DA1DAC /* ViewController.swift in Sources */,
+				8417E27E28BCE1AB00DA1DAC /* TransactionController.swift in Sources */,
+				8417E2D928BF22A900DA1DAC /* TopWidget.swift in Sources */,
+				844D198F28C0083800642139 /* EntryModal.swift in Sources */,
 				8417E2BC28BDAFF100DA1DAC /* TransactionUsecase.swift in Sources */,
+				844D198D28BFA45E00642139 /* TransactionViewmodel.swift in Sources */,
 				8417E27A28BCE1AB00DA1DAC /* AppDelegate.swift in Sources */,
 				8417E28428BCE1AB00DA1DAC /* TransactionApp.xcdatamodeld in Sources */,
 				8417E2D428BF1C2300DA1DAC /* Coordinator.swift in Sources */,
 				8417E2B828BD47CC00DA1DAC /* TransactionRepository.swift in Sources */,
+				844D199428C0DF1800642139 /* UIView.swift in Sources */,
+				844D199628C21CF200642139 /* UIViewController.swift in Sources */,
 				8417E27C28BCE1AB00DA1DAC /* SceneDelegate.swift in Sources */,
+				844D199828C21D1B00642139 /* Date.swift in Sources */,
 				8417E2B628BD0F1300DA1DAC /* PersistenceController.swift in Sources */,
 				8417E2C128BDBB0A00DA1DAC /* Persistence.swift in Sources */,
+				8417E2DB28BF253400DA1DAC /* SingleTop.swift in Sources */,
+				844D199128C0CB5700642139 /* BottomOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844D199A28C25B6D00642139 /* TransactionControllerTest.swift in Sources */,
 				8417E2D228BF15AA00DA1DAC /* TransactionUsecaseTest.swift in Sources */,
 				8417E29428BCE1AE00DA1DAC /* TransactionRepositoryTests.swift in Sources */,
 				8417E2CE28BF02C300DA1DAC /* PersistenceTest.swift in Sources */,

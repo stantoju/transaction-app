@@ -9,8 +9,10 @@ import Foundation
 
 protocol iTransactionUsecase {
     func getTransactions(completion: @escaping (([Transaction]) -> Void))
-    func saveTransactions(transaction: Transaction)
-    func deleteTransactions(transaction: Transaction)
+    func saveTransactions(transaction: Transaction, completion: @escaping ((Bool) -> Void))
+    func savemultipleTransactions(transaction: [Transaction], completion: @escaping ((Bool) -> Void))
+    func deleteTransactions(transaction: Transaction, completion: @escaping ((Bool) -> Void))
+    func truncateDatabase()
 }
 
 class TransactionUsecase: iTransactionUsecase {
@@ -21,8 +23,16 @@ class TransactionUsecase: iTransactionUsecase {
         self.repository = repository
     }
     
-    func deleteTransactions(transaction: Transaction) {
-        repository.deleteTransactions(data: transaction)
+    
+    func deleteTransactions(transaction: Transaction, completion: @escaping ((Bool) -> Void)) {
+        repository.deleteTransactions(data: transaction) { res in
+            switch res {
+            case .success(let result):
+                completion(result)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
     
     func getTransactions(completion: @escaping (([Transaction]) -> Void)) {
@@ -35,9 +45,34 @@ class TransactionUsecase: iTransactionUsecase {
             }
         }
     }
+
     
-    func saveTransactions(transaction: Transaction) {
-        repository.saveTransactions(data: transaction) { _ in }
+    func saveTransactions(transaction: Transaction, completion: @escaping ((Bool) -> Void)) {
+        repository.saveTransactions(data: transaction) { res in
+            switch res {
+            case .success(_):
+                completion(true)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
+    
+    func savemultipleTransactions(transaction: [Transaction], completion: @escaping ((Bool) -> Void)) {
+        repository.saveMultipleTransactions(data: transaction) { res in
+            switch res {
+            case .success(_):
+                completion(true)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
+    
+    func truncateDatabase() {
+        repository.truncateDatabase()
     }
     
     

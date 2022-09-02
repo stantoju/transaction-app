@@ -45,8 +45,36 @@ class MockRepository: TransactionDatasource {
         }
     }
     
-    func deleteTransactions(data: Transaction) {
-        persistence.deleteItem(data: data)
+    
+    func saveMultipleTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
+        persistence.saveItem(data: data) { res in
+            switch res {
+            case .success(let result):
+                // returning result from persistence
+                completion(.success(result))
+            case .failure(let err):
+                // converting to custom error
+                completion(.failure(.unknownResponse(s: err.localizedDescription)))
+            }
+        }
+    }
+    
+    
+    func deleteTransactions(data: Transaction, completion: @escaping ((Result<Bool, CustomErrors>) -> Void)) {
+        persistence.deleteItem(data: data) { res in
+            switch res {
+            case .success(let result):
+                // returning result from persistence
+                completion(.success(result))
+            case .failure(let err):
+                // converting to custom error
+                completion(.failure(.unknownResponse(s: err.localizedDescription)))
+            }
+        }
+    }
+    
+    func truncateDatabase() {
+        
     }
     
     

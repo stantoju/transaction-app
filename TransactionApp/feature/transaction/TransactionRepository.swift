@@ -9,13 +9,14 @@ protocol TransactionDatasource {
     
     func getTransactions(completion: @escaping ((Result<[Transaction], CustomErrors>) -> Void))
     func saveTransactions(data: Transaction, completion: @escaping ((Result<String, CustomErrors>) -> Void))
-    func deleteTransactions(data: Transaction)
+    func saveMultipleTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void))
+    func deleteTransactions(data: Transaction, completion: @escaping ((Result<Bool, CustomErrors>) -> Void))
+    func truncateDatabase()
     
 }
 
 
 class TransactionRepository: TransactionDatasource {
-    
     
     var persistence: iPersistence
     
@@ -31,9 +32,18 @@ class TransactionRepository: TransactionDatasource {
         persistence.saveItem(data: data, completion: completion)
     }
     
-    func deleteTransactions(data: Transaction) {
-        persistence.deleteItem(data: data)
+    func saveMultipleTransactions(data: [Transaction], completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
+        persistence.saveItem(data: data, completion: completion)
     }
- 
+    
+    
+    func deleteTransactions(data: Transaction, completion: @escaping ((Result<Bool, CustomErrors>) -> Void)) {
+        persistence.deleteItem(data: data, completion: completion)
+    }
+    
+    
+    func truncateDatabase() {
+        persistence.clearDatabase()
+    }
     
 }

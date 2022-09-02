@@ -78,18 +78,26 @@ class PersistenceTest: XCTestCase {
             switch res {
             case .success(_):
                 // Delete the item after persistence
-                self.persistence.deleteItem(data: transaction1)
-                // Fetch records after deletion
-                self.persistence.getItems { res2 in
-                    switch res2 {
-                    case .success(let response):
-                        XCTAssertTrue((response as Any) is [Transaction])
-                        XCTAssertTrue(response.isEmpty)
-                        exp.fulfill()
+                self.persistence.deleteItem(data: transaction1) { rez in
+                    switch rez {
+                    case .success(_):
+                        // Fetch records after deletion
+                        self.persistence.getItems { res2 in
+                            switch res2 {
+                            case .success(let response):
+                                XCTAssertTrue((response as Any) is [Transaction])
+                                XCTAssertTrue(response.isEmpty)
+                                exp.fulfill()
+                            case .failure(_):
+                                XCTFail("Expected success, but got error response")
+                                exp.fulfill()
+                            }
+                        }
                     case .failure(_):
                         XCTFail("Expected success, but got error response")
                         exp.fulfill()
                     }
+                    
                 }
             case .failure(_):
                 XCTFail("Expected success, but got error response")

@@ -16,10 +16,18 @@ class MockPersistence: iPersistence {
     
     func saveItem<T>(data: T, completion: @escaping ((Result<String, CustomErrors>) -> Void)) {
         if successType {
-            let transactions = data as! Transaction
-            transactionStorage.append(transactions)
-            completion(.success("success"))
-        } else {
+            if let transaction = data as? Transaction {
+            transactionStorage.append(transaction)
+                completion(.success("success"))
+            }
+            else if let transactions = data as? [Transaction] {
+                transactionStorage.append(contentsOf: transactions)
+                completion(.success("success"))
+            } else {
+                completion(.failure(.unknownResponse(s: "Something went wrong")))
+            }
+        }
+        else {
             completion(.failure(.unknownResponse(s: "Something went wrong")))
         }
     }
@@ -34,6 +42,17 @@ class MockPersistence: iPersistence {
     
     func deleteItem(data: Transaction) {
         transactionStorage = transactionStorage.filter { return $0.id != data.id}
+    }
+    
+    func deleteItem(data: Transaction, completion: @escaping (Result<Bool, CustomErrors>) -> Void) {
+        if successType {
+            transactionStorage = transactionStorage.filter { return $0.id != data.id}
+            completion(.success(true))
+        } else {
+            completion(.failure(.unknownResponse(s: "Something went wrong")))        }
+    }
+    
+    func clearDatabase() {
     }
     
     
