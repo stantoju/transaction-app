@@ -38,6 +38,7 @@
 		844D199628C21CF200642139 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199528C21CF100642139 /* UIViewController.swift */; };
 		844D199828C21D1B00642139 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199728C21D1B00642139 /* Date.swift */; };
 		844D199A28C25B6D00642139 /* TransactionControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199928C25B6D00642139 /* TransactionControllerTest.swift */; };
+		844D199D28C2E0C900642139 /* DeletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D199C28C2E0C800642139 /* DeletionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		844D199528C21CF100642139 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		844D199728C21D1B00642139 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		844D199928C25B6D00642139 /* TransactionControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionControllerTest.swift; sourceTree = "<group>"; };
+		844D199C28C2E0C800642139 /* DeletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				8417E2D728BF228C00DA1DAC /* component */,
 				8417E27D28BCE1AB00DA1DAC /* TransactionController.swift */,
 				844D198C28BFA45E00642139 /* TransactionViewmodel.swift */,
+				844D199C28C2E0C800642139 /* DeletionController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				8417E2B628BD0F1300DA1DAC /* PersistenceController.swift in Sources */,
 				8417E2C128BDBB0A00DA1DAC /* Persistence.swift in Sources */,
 				8417E2DB28BF253400DA1DAC /* SingleTop.swift in Sources */,
+				844D199D28C2E0C900642139 /* DeletionController.swift in Sources */,
 				844D199128C0CB5700642139 /* BottomOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H2N6PCRV74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransactionApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TransactionApp;
@@ -641,6 +646,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H2N6PCRV74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransactionApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TransactionApp;

@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 
 protocol Coordinator {
-    func launchController() -> UIViewController
+    typealias Coordinate =  UIViewController & Coordinating
+    func launcherController() -> UIViewController
+    func openControllerAsModal<T>(originVC: UIViewController, destinationVC: ControllerType, data: T?)
 }
 
-
+protocol Coordinating {
+    var coordinator: Coordinator? {get set}
+}

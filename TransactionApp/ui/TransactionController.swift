@@ -9,7 +9,9 @@ import UIKit
 import SwiftUI
 import Combine
 
-class TransactionController: UIViewController {
+class TransactionController: UIViewController, Coordinating {
+    
+    var coordinator: Coordinator?
     
     var viewModel: TransactionViewmodel?
     var topWidget: TopWidget!
@@ -133,13 +135,13 @@ class TransactionController: UIViewController {
         topWidget.statistics = stats
     }
     
-    @objc func deleteTransaction() {
-        viewModel?.deleteTransaction()
+    func deleteTransaction(_ transaction: Transaction) {
+        viewModel?.deleteTransaction(transaction)
     }
     
-    func startDelete(t: GroupedTransaction) {
-//        viewModel?.transactionToDelete = t
-//        showDialogPrompt(message: "You are about to delete this entry \(t.title) : $\(t.amount)", yesString: "Delete", noString: "Cancel", yesAction: deleteTransaction, noAction: nil)
+    func lauchDeleteModal(_ groupedTransaction: GroupedTransaction) {
+        let data = DeleteControllerData(groupedTransaction: groupedTransaction, action: deleteTransaction) // Prepare data value to be passed
+        coordinator?.openControllerAsModal(originVC: self, destinationVC: .deletion, data: data)
     }
     
     
@@ -163,8 +165,8 @@ extension TransactionController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DailyTransaction.identifier, for: indexPath) as! DailyTransaction
-        cell.startDelete = startDelete
+        guard let transaction = viewModel?.transactions[indexPath.item] else { return  }
+        lauchDeleteModal(transaction)
     }
     
 }
@@ -192,3 +194,4 @@ struct TransactionController_Previews: PreviewProvider {
         
     }
 }
+

@@ -14,7 +14,6 @@ class TransactionViewmodel {
     @Published var transactions = [GroupedTransaction]()
     var rawTransaction = [Transaction]() // For fast UI management
     private let usecase: iTransactionUsecase
-    var transactionToDelete: Transaction?
     init(usecase: iTransactionUsecase) {
         self.usecase = usecase
     }
@@ -44,9 +43,8 @@ class TransactionViewmodel {
         }
     }
     
-    func deleteTransaction() {
-        guard let t = transactionToDelete else { return }
-        usecase.deleteTransactions(transaction: t) { [weak self] _ in
+    func deleteTransaction(_ transactionToDelete: Transaction) {
+        usecase.deleteTransactions(transaction: transactionToDelete) { [weak self] _ in
             self?.getTransactions()
         }
     }

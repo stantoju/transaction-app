@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let coordinator = MainCoordinator()
-        window?.rootViewController = coordinator.launchController()
+        window?.rootViewController = coordinator.launcherController()
         window?.makeKeyAndVisible()
     }
 

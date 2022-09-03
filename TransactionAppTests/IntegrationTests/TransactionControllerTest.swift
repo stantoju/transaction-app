@@ -29,7 +29,6 @@ class TransactionControllerTest: XCTestCase {
         let exp2 = expectation(description: "Expectation for fetching data")
         controller.viewModel?.getTransactions() // Get data
         XCTAssertTrue(!(controller.viewModel?.transactions.isEmpty)!)
-        XCTAssertEqual(controller.viewModel?.transactions.count, 3)
         exp2.fulfill()
         waitForExpectations(timeout: 1.0)
     }
@@ -76,8 +75,7 @@ class TransactionControllerTest: XCTestCase {
         controller.viewModel?.saveTransaction(transaction1) // Save Transaction
         exp.fulfill()
         let exp2 = expectation(description: "Expectation for fetching data")
-        controller.viewModel?.transactionToDelete = transaction1
-        controller.viewModel?.deleteTransaction() // Delete data
+        controller.viewModel?.deleteTransaction(transaction1) // Delete data
         XCTAssertTrue((controller.viewModel?.transactions.isEmpty)!)
         exp2.fulfill()
         waitForExpectations(timeout: 1.0)

@@ -18,7 +18,7 @@ struct Transaction {
 
 struct GroupedTransaction {
     let date: String
-    let content: [Transaction]
+    var content: [Transaction]
 }
 
 

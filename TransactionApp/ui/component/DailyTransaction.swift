@@ -15,7 +15,6 @@ class DailyTransaction: UITableViewCell {
     
     static let identifier = "\(DailyTransaction.self)"
     var container: UIStackView!
-    var startDelete: ((GroupedTransaction) -> Void)?
     var transactions: GroupedTransaction? {
         didSet {
             processContent()
@@ -49,7 +48,6 @@ class DailyTransaction: UITableViewCell {
         container.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         container.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         container.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        container.addTapGesture(tapNumber: 1, target: self, action: #selector(deleteTransaction))
         
     }
     
@@ -66,6 +64,7 @@ class DailyTransaction: UITableViewCell {
 //       Add date label
         let dateCell = SingleCell()
         dateCell.translatesAutoresizingMaskIntoConstraints = false
+        dateCell.heightAnchor.constraint(equalToConstant: 50).isActive = true
         dateCell.setHeader(header: transactions?.date ?? "")
         container.addArrangedSubview(dateCell)
         
@@ -74,20 +73,10 @@ class DailyTransaction: UITableViewCell {
             let singleCell = SingleCell()
             singleCell.transaction = item
             singleCell.translatesAutoresizingMaskIntoConstraints = false
+            singleCell.heightAnchor.constraint(equalToConstant: 50).isActive = true
             singleCell.setConent(item)
             container.addArrangedSubview(singleCell)
         }
-    }
-    
-    
-    
-    @objc private func deleteTransaction() {
-        container.backgroundColor = .yellow
-//        delegate?.startDelete(t: T##Transaction)
-        print("xxx")
-//        let i = sender.tag
-//        guard let singleTransaction = transactions?.content[i] else { return }
-//        startDelete?(singleTransaction)
     }
 
 }
@@ -101,8 +90,8 @@ struct DailyTransaction_Previews: PreviewProvider {
     }
     struct Container: UIViewRepresentable {
         func makeUIView(context: Context) -> UIView {
-//            SingleCell()
-            DailyTransaction()
+            SingleCell()
+//            DailyTransaction()
         }
         
         func updateUIView(_ uiView: UIView, context: Context) {}
@@ -114,17 +103,16 @@ struct DailyTransaction_Previews: PreviewProvider {
 
 
 
-class SingleCell: UIView {
+class SingleCell: UITableViewCell {
     
+    static let identifier = "\(SingleCell.self)"
     var title: UILabel!
     var amount: UILabel!
     var hr: UIView!
     var transaction: Transaction?
-    var startDelete: ((Transaction) -> Void)?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
     }
     
@@ -135,14 +123,14 @@ class SingleCell: UIView {
     
     fileprivate func  setupView(){
         title = UILabel()
-        title.text = ""
+        title.text = "Title"
         title.translatesAutoresizingMaskIntoConstraints = false
         addSubview(title)
         title.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         
         amount = UILabel()
-        amount.text = ""
+        amount.text = "$300"
         amount.translatesAutoresizingMaskIntoConstraints = false
         addSubview(amount)
         amount.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
@@ -156,29 +144,19 @@ class SingleCell: UIView {
         hr.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         hr.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         hr.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 50).isActive = true
-        title.addTapGesture(tapNumber: 2, target: self, action: #selector(initiateDelete))
     }
     
-    @objc private func initiateDelete(){
-        print("sss")
-        backgroundColor = .green
-//        guard let t = transaction else { return }
-//        startDelete?(t)
-    }
     
     func setHeader(header: String) {
         title.text = header
         amount.isHidden = true
     }
     
-    
-    func setConent(_ transaction: Transaction) {
-        let value = Double(transaction.amount).rounded(toPlaces: 2)
-        title.text = transaction.title
-        switch transaction.type {
+    func setConent(_ _transaction: Transaction?) {
+        guard let item = _transaction else { return }
+        let value = Double(item.amount).rounded(toPlaces: 2)
+        title.text = item.title
+        switch item.type {
         case .income:
             amount.text = "$\(value)"
         case .expenses:
