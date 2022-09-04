@@ -16,13 +16,23 @@ Testing : **Unit Tests, Integrated Tests**
 
 UI State Management : **Combine**
 
+Local Persistence : **CoreData**
+
 Navigation and Dependency Injections : **Coordinator Layout**
 
-# How to To Run
+# How to To Run Project
 
 **1** - Clone the Repository (https://github.com/stantoju/transaction-app.git)
 
-**2** - Unzip the the project zip file
+**2** - Navigate to the project root folder
+
+**3** - Launch the TransactionApp.xcodeproj file (with XCode)
+
+# How to To Run Test
+
+**1** - Launch the TransactionApp.xcodeproj file (with XCode)
+
+**2** - Press `command + U`
 
 **3** - Launch the TransactionApp.xcodeproj file
 
@@ -46,7 +56,7 @@ Navigation and Dependency Injections : **Coordinator Layout**
   -- It would have been ideal to have the user interact and delete the transaction item directly from the TransactionController
   -- The process of rendering the transcation from did make that pretty easy (Another approach was taken)
 - Actions:
-  -- I took the approach of passing the list of transactions for a particular day to another view controller (DeletionController)
+  -- I took the approach of passing the list of transactions for a particular day to another view controller (`DeletionController`)
   -- I also took the opportunity to showcase the navigation and dependency injection through the implemented coordinator pattern
 - Result
   -- Seemless item deletion implementaion and user experience
