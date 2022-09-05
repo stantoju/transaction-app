@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class SingleTop: UIView {
     
@@ -52,21 +51,3 @@ class SingleTop: UIView {
     }
 }
 
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct SingleTop_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    struct Container: UIViewRepresentable {
-        func makeUIView(context: Context) -> UIView {
-            SingleTop()
-        }
-        
-        func updateUIView(_ uiView: UIView, context: Context) {}
-        
-        typealias UIViewType = UIView
-        
-    }
-}

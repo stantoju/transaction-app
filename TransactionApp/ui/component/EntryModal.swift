@@ -7,7 +7,6 @@
 
 
 import UIKit
-import SwiftUI
 import Combine
 
 class EntryModal: UIView {
@@ -276,19 +275,3 @@ extension EntryModal: UITextFieldDelegate {
 }
 
 
-// MARK: - Canvas Previews with SwiftUI
-struct EntryModal_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    struct Container: UIViewRepresentable {
-        func makeUIView(context: Context) -> UIView {
-            EntryModal()
-        }
-        
-        func updateUIView(_ uiView: UIView, context: Context) {}
-        
-        typealias UIViewType = UIView
-        
-    }
-}

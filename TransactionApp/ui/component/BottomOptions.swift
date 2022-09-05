@@ -5,7 +5,6 @@
 //  Created by Toju on 9/1/22.
 //
 
-import SwiftUI
 import UIKit
 
 
@@ -98,24 +97,5 @@ class BottomOptions: UIView {
     }
     
     
-}
-
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct DropOption_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    struct Container: UIViewRepresentable {
-        func makeUIView(context: Context) -> UIView {
-            BottomOptions()
-        }
-        
-        func updateUIView(_ uiView: UIView, context: Context) {}
-        
-        typealias UIViewType = UIView
-        
-    }
 }
 

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class TopWidget: UIView {
     
@@ -83,22 +82,4 @@ class TopWidget: UIView {
         progressbar.progress = statistics.ratio
     }
 
-}
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct HomeTop_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    struct Container: UIViewRepresentable {
-        func makeUIView(context: Context) -> UIView {
-            TopWidget()
-        }
-        
-        func updateUIView(_ uiView: UIView, context: Context) {}
-        
-        typealias UIViewType = UIView
-        
-    }
 }

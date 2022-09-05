@@ -8,7 +8,6 @@
 import Foundation
 
 import UIKit
-import SwiftUI
 
 
 class DailyTransaction: UITableViewCell {
@@ -81,25 +80,6 @@ class DailyTransaction: UITableViewCell {
 
 }
 
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct DailyTransaction_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    struct Container: UIViewRepresentable {
-        func makeUIView(context: Context) -> UIView {
-            SingleCell()
-//            DailyTransaction()
-        }
-        
-        func updateUIView(_ uiView: UIView, context: Context) {}
-        
-        typealias UIViewType = UIView
-        
-    }
-}
 
 
 

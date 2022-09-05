@@ -7,7 +7,6 @@
 
 
 import UIKit
-import SwiftUI
 
 class DeletionController: UIViewController, Coordinating {
     
@@ -97,30 +96,6 @@ extension DeletionController: UITableViewDataSource, UITableViewDelegate{
             data?.groupedTransaction.content = content // Replace  data content
             tableView.reloadData() // Refresh table
                 }
-    }
-}
-
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct DeletionController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            DeletionController()
-            
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context)  {
-            
-        }
-        
-        typealias UIViewControllerType = UIViewController
-        
-        
     }
 }
 

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 import Combine
 
 class TransactionController: UIViewController, Coordinating {
@@ -170,28 +169,3 @@ extension TransactionController: UITableViewDataSource, UITableViewDelegate{
     }
     
 }
-
-
-
-// MARK: - Canvas Previews with SwiftUI
-struct TransactionController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            TransactionController()
-            
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context)  {
-            
-        }
-        
-        typealias UIViewControllerType = UIViewController
-        
-        
-    }
-}
-
